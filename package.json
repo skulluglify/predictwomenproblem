@@ -1,0 +1,25 @@
+{
+  "name": "womenperiod",
+  "version": "1.0.7",
+  "description": "Predict Women Problem (Menstruation Period). - Continues period. - With JavaScript, not really precious, but some relatable. - Im men, so idk what im done yet, i write for my purpose only (helping for my friends, to do for their job).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Women :)\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skulluglify/predictwomenproblem.git"
+  },
+  "keywords": [
+    "women",
+    "javascript",
+    "problem",
+    "period"
+  ],
+  "author": " <skulluglify@outlook.com/>",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/skulluglify/predictwomenproblem/issues"
+  },
+  "homepage": "https://github.com/skulluglify/predictwomenproblem#readme"
+}
