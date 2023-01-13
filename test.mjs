@@ -1,19 +1,9 @@
 import { predictWomenProblemNext } from './index.js';
 
-let predict = predictWomenProblemNext(1, 1, 2023, 5, 30);
-
-console.log(predict.next());
-console.log(predict.next());
+let predict = predictWomenProblemNext('01', '01', '2023', '5', '30');
 
 let b = predict.next();
 let womenProblem = b.value;
 
-// womenProblem.menstrStart.day
-// womenProblem.menstrStart.month
-// womenProblem.menstrStart.year
-
-console.log(womenProblem.menstrStart);
-console.log(womenProblem.menstrEnd);
-console.log(womenProblem.preProblem);
-console.log(womenProblem.problemPoint);
-console.log(womenProblem.postProblem);
+console.log(womenProblem);
+console.log(womenProblem.menstrStart.toString());

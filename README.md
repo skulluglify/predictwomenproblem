@@ -6,64 +6,51 @@
 
 
 ````javascript
-// fix nodejs & bun.sh
+// nodejs only, if you are using bun.sh, check on file test.js
+import { predictWomenProblemNext } from 'womenperiod';
 
-import DecmeInstance from './index.js';
-
-// sorry for this, complicated stuff, bcs i use two methods, nodejs & bun.sh
-const {
-  WomenProblem, // struct<{ menstrStart, menstrEnd, preProblem, problemPoint, postProblem }>
-  getRangeMonth, // month, year -> 28 | 29 | 30 | 31
-  normalizeDate, // start|day, month, year -> zDate
-  predictWomenProblem, // start|day, month, year, period, range -> WomenProblem
-  predictWomenProblemNext, // start|day, month, year, period, range -> Next<WomenProblem>
-  zDate // day, month, year
-} = typeof DecmeInstance == 'function' ? DecmeInstance()?.default : DecmeInstance?.default ?? DecmeInstance;
-
-// !! caution
-// if you are use only nodejs, you can try it for yourself
-import { predictWomenProblemNext } from './index.js';
-
-// predictWomenProblemNext()
-let predict = predictWomenProblemNext(1, 1, 2023, 5, 30);
-
-console.log(predict.next());
-console.log(predict.next());
+let predict = predictWomenProblemNext('01', '01', '2023', '5', '30');
 
 let b = predict.next();
 let womenProblem = b.value;
 
-// output: b
-{
-  value: {
-    menstrStart: {
-      day: 1,
-      month: 1,
-      year: 2023
-    },
-    menstrEnd: {
-      day: 5,
-      month: 1,
-      year: 2023
-    },
-    preProblem: {
-      day: 12,
-      month: 1,
-      year: 2023
-    },
-    problemPoint: {
-      day: 15,
-      month: 1,
-      year: 2023
-    },
-    postProblem: {
-      day: 18,
-      month: 1,
-      year: 2023
-    }
-  },
-  done: false
-}
+console.log(womenProblem);
+console.log(womenProblem.menstrStart.toString());
+
+// output: console.log
+// {
+//   menstrStart: {
+//     day: 1,
+//     month: 1,
+//     year: 2023,
+//     toString: [Function]
+//   },
+//   menstrEnd: {
+//     day: 5,
+//     month: 1,
+//     year: 2023,
+//     toString: [Function]
+//   },
+//   preProblem: {
+//     day: 12,
+//     month: 1,
+//     year: 2023,
+//     toString: [Function]
+//   },
+//   problemPoint: {
+//     day: 15,
+//     month: 1,
+//     year: 2023,
+//     toString: [Function]
+//   },
+//   postProblem: {
+//     day: 18,
+//     month: 1,
+//     year: 2023,
+//     toString: [Function]
+//   }
+// }
+// 2023-01-01
 ````
 
 ## if you feel helped, don't forget about my coffee.
