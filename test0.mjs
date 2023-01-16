@@ -47,7 +47,7 @@ let calendarNextDataWP = createCalendarNextDataWP(
 console.log(calendarNextDataWP.next());
 
 // make it easy with limitations
-let max = 5;
+let max = 12;
 for (let cwp of calendarNextDataWP) {
 
   if (!max) break;
